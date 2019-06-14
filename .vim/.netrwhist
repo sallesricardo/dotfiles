@@ -1,0 +1,7 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhist_cnt =5
+let g:netrw_dirhist_1='/home/ricardo/GOG Games/Full Throttle Remastered/game'
+let g:netrw_dirhist_2='/home/ricardo/teste/tmp/python/flask-tracking/flask-tracking'
+let g:netrw_dirhist_3='/home/ricardo/teste/cursobot'
+let g:netrw_dirhist_4='/home/ricardo/teste/python/wtf'
+let g:netrw_dirhist_5='/home/ricardo/git/dotfiles'
