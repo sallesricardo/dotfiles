@@ -1,0 +1,42 @@
+Host server39
+	User username
+	HostName 192.168.1.39
+
+Host server15
+	User username
+	HostName 192.168.1.15
+
+Host servervpn
+	User username
+	HostName 10.12.0.1
+
+Host server15vpn
+	User username
+	ProxyCommand ssh -q servervpn nc -q0 192.168.1.15 22
+
+Host server-01
+	User username
+	HostName 10.12.0.238
+
+Host server-01-db
+	User username
+	ProxyCommand ssh -q server-01 nc -q0 10.31.0.2 22
+
+Host server-01-app
+	User username
+	ProxyCommand ssh -q server-01 nc -q0 10.31.0.3 22
+
+Host server-01-web
+    User username
+    HostName 10.12.0.254
+
+Host 10.31.?.?
+	User username
+	ProxyCommand ssh -q server-01-app nc -q0 %h 22
+
+Host Feira
+	ServerAliveInterval 10
+
+Host 10.11.0.?
+    ProxyCommand ssh -q Feira nc -q0 %h 22
+

@@ -6,7 +6,7 @@
 
 # the default umask is set in /etc/profile; for setting the umask
 # for ssh logins, install and configure the libpam-umask package.
-#umask 022
+# umask 022
 
 # if running bash
 if [ -n "$BASH_VERSION" ]; then
@@ -20,9 +20,6 @@ fi
 if [ -d "$HOME/bin" ] ; then
     PATH="$HOME/bin:$PATH"
 fi
-
-#. /home/ricardo/.xsmartloopTS
-#. /home/ricardo/.xsmartloopTS
 
 export PATH="$PATH:"/opt/microchip/xc8/v1.45/bin""
 export PATH="$PATH:"/opt/microchip/xc8/v2.00/bin""
